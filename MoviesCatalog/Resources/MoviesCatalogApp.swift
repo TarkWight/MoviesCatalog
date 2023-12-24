@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct MoviesCatalogApp: App {
 
-   // @StateObject private var appCoordinator = AppCoordinator()
+   @StateObject private var appCoordinator = AppCoordinator()
     
     var body: some Scene {
         WindowGroup {
