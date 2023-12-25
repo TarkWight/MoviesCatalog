@@ -14,3 +14,7 @@ class LoginCoordinator: ObservableObject {
         currentScreen = .authenticationChoice
     }
 }
+
+
+
+

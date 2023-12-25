@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1C16F52B3932F30018A280 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C16F42B3932F30018A280 /* SwiftUIView.swift */; };
 		4D89938A2B383667007125A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8993892B383667007125A0 /* Assets.xcassets */; };
 		4D89938C2B38367E007125A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89938B2B38367E007125A0 /* ContentView.swift */; };
 		4D89938E2B3836AC007125A0 /* MoviesCatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89938D2B3836AC007125A0 /* MoviesCatalogApp.swift */; };
@@ -22,11 +23,14 @@
 		4D8993AA2B38703D007125A0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993A92B38703D007125A0 /* MainCoordinator.swift */; };
 		4D8993AC2B387054007125A0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993AB2B387054007125A0 /* MainView.swift */; };
 		4D8993AE2B38706D007125A0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993AD2B38706D007125A0 /* MainViewModel.swift */; };
+		4D8993B02B38813B007125A0 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993AF2B38813B007125A0 /* CustomButtonStyle.swift */; };
+		4D8993B22B388171007125A0 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993B12B388171007125A0 /* CustomColors.swift */; };
 		5C97E6132B2B9740006A609F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C97E6122B2B9740006A609F /* README.md */; };
 		5C97E6152B2B974D006A609F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5C97E6142B2B974D006A609F /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D1C16F42B3932F30018A280 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		4D8993892B383667007125A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D89938B2B38367E007125A0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D89938D2B3836AC007125A0 /* MoviesCatalogApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCatalogApp.swift; sourceTree = "<group>"; };
@@ -42,6 +46,9 @@
 		4D8993A92B38703D007125A0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		4D8993AB2B387054007125A0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4D8993AD2B38706D007125A0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4D8993AF2B38813B007125A0 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		4D8993B12B388171007125A0 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		4D8993B52B38A0EB007125A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C97E6012B2B972B006A609F /* MoviesCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C97E6122B2B9740006A609F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C97E6142B2B974D006A609F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -62,8 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				4D89938B2B38367E007125A0 /* ContentView.swift */,
-				4D8993972B3858D0007125A0 /* LoginView.swift */,
 				4D89939F2B386DB8007125A0 /* AuthenticationChoiceView.swift */,
+				4D1C16F42B3932F30018A280 /* SwiftUIView.swift */,
+				4D8993972B3858D0007125A0 /* LoginView.swift */,
 				4D8993A72B386FEE007125A0 /* RegistrationView.swift */,
 				4D8993AB2B387054007125A0 /* MainView.swift */,
 			);
@@ -91,8 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				4D89938D2B3836AC007125A0 /* MoviesCatalogApp.swift */,
-				4D8993892B383667007125A0 /* Assets.xcassets */,
+				4D8993AF2B38813B007125A0 /* CustomButtonStyle.swift */,
+				4D8993B12B388171007125A0 /* CustomColors.swift */,
 				4D89939B2B3859C0007125A0 /* Screen.swift */,
+				4D8993892B383667007125A0 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -129,6 +139,7 @@
 		5C97E6032B2B972B006A609F /* MoviesCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				4D8993B52B38A0EB007125A0 /* Info.plist */,
 				4D8993952B3846D9007125A0 /* Coordinators */,
 				4D8993942B3846A4007125A0 /* Resources */,
 				4D8993922B38464E007125A0 /* Models */,
@@ -166,7 +177,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					5C97E6002B2B972B006A609F = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -212,6 +223,7 @@
 			files = (
 				4D8993A82B386FEE007125A0 /* RegistrationView.swift in Sources */,
 				4D8993AC2B387054007125A0 /* MainView.swift in Sources */,
+				4D1C16F52B3932F30018A280 /* SwiftUIView.swift in Sources */,
 				4D8993AA2B38703D007125A0 /* MainCoordinator.swift in Sources */,
 				4D89939C2B3859C0007125A0 /* Screen.swift in Sources */,
 				4D8993A42B386F25007125A0 /* RegistrationViewModel.swift in Sources */,
@@ -220,8 +232,10 @@
 				4D8993AE2B38706D007125A0 /* MainViewModel.swift in Sources */,
 				4D8993A02B386DB8007125A0 /* AuthenticationChoiceView.swift in Sources */,
 				4D89939E2B38678E007125A0 /* LoginViewModel.swift in Sources */,
+				4D8993B22B388171007125A0 /* CustomColors.swift in Sources */,
 				4D8993A22B386E07007125A0 /* AppCoordinator.swift in Sources */,
 				4D89938E2B3836AC007125A0 /* MoviesCatalogApp.swift in Sources */,
+				4D8993B02B38813B007125A0 /* CustomButtonStyle.swift in Sources */,
 				4D89939A2B385994007125A0 /* LoginCoordinator.swift in Sources */,
 				4D89938C2B38367E007125A0 /* ContentView.swift in Sources */,
 			);
@@ -267,6 +281,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -328,6 +343,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -357,11 +373,12 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviesCatalog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,11 +405,12 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviesCatalog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

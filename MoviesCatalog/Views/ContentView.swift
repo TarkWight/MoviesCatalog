@@ -21,9 +21,9 @@ struct ContentView: View {
         case .main:
             MainView(viewModel: MainViewModel(), coordinator: MainCoordinator())
         case nil:
-            // Можно показать загрузочный экран или что-то еще
             Text("Loading...")
         }
     }
 }
+
 
