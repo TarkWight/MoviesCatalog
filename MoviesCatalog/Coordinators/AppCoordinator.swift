@@ -36,8 +36,18 @@ class AppCoordinator: ObservableObject {
 
     init() {
         checkAuthenticationStatus()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleShowRegistration), name: NSNotification.Name("ShowRegistration"), object: nil)
+
     }
 
+    deinit {
+            NotificationCenter.default.removeObserver(self)
+        }
+    
+    
+    @objc func handleShowRegistration() {
+            showRegistration()
+        }
     private func checkAuthenticationStatus() {
         // Логика проверки статуса входа пользователя
         // ...

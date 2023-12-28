@@ -14,5 +14,8 @@ class LoginCoordinator: ObservableObject {
     func goBackToAuthenticationChoice() {
         parentCoordinator?.currentScreen = .authenticationChoice
     }
-}
 
+    func goToRegistration() {
+        NotificationCenter.default.post(name: NSNotification.Name("ShowRegistration"), object: nil)
+    }
+}

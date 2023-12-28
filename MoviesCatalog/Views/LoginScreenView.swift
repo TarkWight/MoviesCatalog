@@ -13,34 +13,61 @@ struct LoginScreenView: View {
 
     var body: some View {
         VStack {
-            Text("Login")
-                .font(.title)
-                .padding()
+            // MARK: First Frame
+            HStack {
+                backButton
+                    .padding(.leading, 15)
+                
+                Spacer()
+                
+                Text("FИЛЬМУС")
+                    .font(.title2)
+                    .bold()
+                    .padding(.trailing, 15)
+                    .foregroundColor(EnumColors.accent)
+                
+                Spacer()
+            }
+            .padding(.top, 15)
+            
+          // MARK: Second Frame (Label + TextField + Button)
+            VStack {
+                Text("ВХОД")
+                    .font(.title)
+                    .padding()
 
-            TextField("Username", text: $viewModel.username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                TextField("Логин", text: $viewModel.username)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
 
-            SecureField("Password", text: $viewModel.password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                SecureField("Пароль", text: $viewModel.password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
 
-            Button("Login") {
-                viewModel.login()
+                Button("Войти") {
+                    viewModel.login()
+                }
+                .padding()
+            }
+            .padding()
+
+            // MARK: Fifth Frame (Combined Text and Button)
+            HStack {
+                Text("Еще нет аккаунта?")
+                
+                Button("Зарегистрируйтесь") {
+                    // Используйте метод goToRegistration для перехода на экран регистрации
+                    coordinator.goToRegistration()
+                }
+                .padding()
             }
             .padding()
 
             Spacer()
-
-            Button("Back to Authentication Choice") {
-                coordinator.goBackToAuthenticationChoice()
-            }
-            .padding()
         }
         .padding()
         .navigationTitle("Login")
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
     }
 
     private var backButton: some View {
