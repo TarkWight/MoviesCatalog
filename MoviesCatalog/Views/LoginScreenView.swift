@@ -85,10 +85,12 @@ struct LoginScreenView: View {
                 // MARK: Fifth Frame
                 HStack {
                     Text("Еще нет аккаунта?")
+                        .foregroundColor(.white)
                     
                     Button("Зарегистрируйтесь") {
                         coordinator.goToRegistration()
                     }
+                    .foregroundColor(EnumColors.accent)
                     .padding()
                 }
                 .padding()
