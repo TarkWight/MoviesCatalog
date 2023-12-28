@@ -78,6 +78,8 @@ struct LoginScreenView: View {
                     }
                     .buttonStyle(CustomButtonStyle(color: EnumColors.accent, textColor: .white))
                     .padding(.vertical, 20)
+                    .disabled(!areFieldsValid())
+                    .opacity(areFieldsValid() ? 1.0 : 0.5)
                 }
                 .padding()
                 Spacer()
@@ -108,6 +110,10 @@ struct LoginScreenView: View {
                 .foregroundColor(.white)
         }
     }
+    private func areFieldsValid() -> Bool {
+            // Проверка валидности полей (здесь может быть любая логика)
+            return !viewModel.username.isEmpty && !viewModel.password.isEmpty
+        }
 }
 
 
