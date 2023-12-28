@@ -1,5 +1,4 @@
-//
-//  LoginScreenView
+//  LoginScreenView.swift
 //  MoviesCatalog
 //
 //  Created by: Arsentiy
@@ -13,94 +12,105 @@ struct LoginScreenView: View {
     
     @State private var isPasswordVisible = false
     
+    private let appTitle = "FИЛЬМУС"
+    
     var body: some View {
         ZStack {
             EnumColors.gray
                 .ignoresSafeArea()
             VStack {
-                // MARK: First Frame
-                HStack {
-                    backButton
-                        .padding(.leading, 15)
-                    
-                    Spacer()
-                    
-                    Text("FИЛЬМУС")
-                        .font(.title2)
-                        .bold()
-                        .padding(.trailing, 15)
-                        .foregroundColor(EnumColors.accent)
-                    
-                    Spacer()
-                }
-                .padding(.leading, 15)
-                
-                // MARK: Second Frame
-                VStack {
-                    Text("ВХОД")
-                        .font(.title)
-                        .bold()
-                        .padding()
-                        .foregroundColor(.white)
-                    
-                    Text("Логин")
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    TextField("Введите логин", text: $viewModel.username)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Text("Пароль")
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    ZStack(alignment: .trailing) {
-                        if isPasswordVisible {
-                            TextField("Введите пароль", text: $viewModel.password)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                        } else {
-                            SecureField("Введите пароль", text: $viewModel.password)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                        }
-                        
-                        Button(action: {
-                            isPasswordVisible.toggle()
-                        }) {
-                            Image(systemName: isPasswordVisible ? "eye.fill" : "eye.slash.fill")
-                                .foregroundColor(EnumColors.getColor(of: EnumColors.gray, by: 0.45))
-                        }
-                        .padding(.trailing, 8)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Button("Войти") {
-                        viewModel.login()
-                    }
-                    .buttonStyle(CustomButtonStyle(color: EnumColors.accent, textColor: .white))
-                    .padding(.vertical, 20)
-                    .disabled(!areFieldsValid())
-                    .opacity(areFieldsValid() ? 1.0 : 0.5)
-                }
-                .padding()
+                createTopBlock()
+                createMiddleBlock()
                 Spacer()
-                
-                // MARK: Fifth Frame
-                HStack {
-                    Text("Еще нет аккаунта?")
-                        .foregroundColor(.white)
-                    
-                    Button("Зарегистрируйтесь") {
-                        coordinator.goToRegistration()
-                    }
-                    .foregroundColor(EnumColors.accent)
-                    .padding()
-                }
-                .padding()
-                
+                createBottomBlock()
             }
         }
     }
     
+    // MARK: Top block
+    private func createTopBlock() -> some View {
+        HStack {
+            backButton
+                .padding(.leading, 15)
+            
+            Spacer()
+            
+            Text(appTitle)
+                .font(.title2)
+                .bold()
+                .padding(.trailing, 15)
+                .foregroundColor(EnumColors.accent)
+            
+            Spacer()
+        }
+        .padding(.leading, 15)
+    }
+    
+    // MARK: Middle Block
+    private func createMiddleBlock() -> some View {
+        VStack {
+            Text("ВХОД")
+                .font(.title)
+                .bold()
+                .padding()
+                .foregroundColor(.white)
+            
+            Text("Логин")
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            TextField("Введите логин", text: $viewModel.username)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Text("Пароль")
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            ZStack(alignment: .trailing) {
+                if isPasswordVisible {
+                    TextField("Введите пароль", text: $viewModel.password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                } else {
+                    SecureField("Введите пароль", text: $viewModel.password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+                
+                Button(action: {
+                    isPasswordVisible.toggle()
+                }) {
+                    Image(systemName: isPasswordVisible ? "eye.fill" : "eye.slash.fill")
+                        .foregroundColor(EnumColors.getColor(of: EnumColors.gray, by: 0.45))
+                }
+                .padding(.trailing, 8)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Button("Войти") {
+                viewModel.login()
+            }
+            .buttonStyle(CustomButtonStyle(color: EnumColors.accent, textColor: .white))
+            .padding(.vertical, 20)
+            .disabled(!areCredentialsValid())
+            .opacity(areCredentialsValid() ? 1.0 : 0.5)
+        }
+        .padding()
+    }
+    
+    // MARK: Bottom Block
+    private func createBottomBlock() -> some View {
+        HStack {
+            Text("Еще нет аккаунта?")
+                .foregroundColor(.white)
+            
+            Button("Зарегистрируйтесь") {
+                coordinator.goToRegistration()
+            }
+            .foregroundColor(EnumColors.accent)
+            .padding()
+        }
+        .padding()
+    }
+    // MARK: BackButton
     private var backButton: some View {
         Button(action: {
             coordinator.goBackToAuthenticationChoice()
@@ -110,16 +120,16 @@ struct LoginScreenView: View {
                 .foregroundColor(.white)
         }
     }
-    private func areFieldsValid() -> Bool {
-            // Проверка валидности полей (здесь может быть любая логика)
-            return !viewModel.username.isEmpty && !viewModel.password.isEmpty
-        }
+    
+    private func areCredentialsValid() -> Bool {
+        return !viewModel.username.isEmpty && !viewModel.password.isEmpty
+    }
 }
 
-
-
-struct LoginScreenView_Previews: PreviewProvider {
+struct LoginScreenViewPreview: PreviewProvider {
     static var previews: some View {
         LoginScreenView(viewModel: LoginViewModel(), coordinator: LoginCoordinator())
     }
 }
+
+
