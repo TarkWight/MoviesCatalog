@@ -14,6 +14,7 @@ struct AuthenticationChoiceScreenView: View {
     var body: some View {
         ZStack {
             EnumColors.gray
+                .ignoresSafeArea()
             VStack {
                 
                 Text("FИЛЬМУС")
@@ -54,8 +55,6 @@ struct AuthenticationChoiceScreenView: View {
             .navigationTitle("Authentication Choice")
             
         }
-        .edgesIgnoringSafeArea(.all)
-        // .background(EnumColors.gray)
         .statusBar(hidden: false)
     }
     
