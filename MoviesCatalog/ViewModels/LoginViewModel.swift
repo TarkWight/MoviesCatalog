@@ -12,7 +12,6 @@ class LoginViewModel: ObservableObject {
     @Published var password: String = ""
 
     func login() {
-        // Здесь должна быть ваша логика входа
         print("Login with username: \(username), password: \(password)")
     }
 }

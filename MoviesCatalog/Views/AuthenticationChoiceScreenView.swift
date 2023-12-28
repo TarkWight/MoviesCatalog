@@ -1,5 +1,5 @@
 //
-//  AuthenticationChoiceView
+//  AuthenticationChoiceScreenView
 //  MoviesCatalog
 //
 //  Created by: Arsentiy
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct AuthenticationChoiceView: View {
+struct AuthenticationChoiceScreenView: View {
     @ObservedObject var coordinator: AppCoordinator
     
     var body: some View {
@@ -63,6 +63,6 @@ struct AuthenticationChoiceView: View {
 
 struct AuthenticationChoiceView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationChoiceView(coordinator: AppCoordinator())
+        AuthenticationChoiceScreenView(coordinator: AppCoordinator())
     }
 }

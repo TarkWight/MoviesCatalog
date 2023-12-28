@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct MainScreenView: View {
     @ObservedObject var viewModel: MainViewModel
     var coordinator: MainCoordinator
 
@@ -33,6 +33,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(), coordinator: MainCoordinator())
+        MainScreenView(viewModel: MainViewModel(), coordinator: MainCoordinator())
     }
 }

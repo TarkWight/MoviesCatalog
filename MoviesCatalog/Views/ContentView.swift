@@ -13,17 +13,18 @@ struct ContentView: View {
     var body: some View {
         switch appCoordinator.currentScreen {
         case .authenticationChoice:
-            AuthenticationChoiceView(coordinator: appCoordinator)
+            AuthenticationChoiceScreenView(coordinator: appCoordinator)
         case .login:
-            LoginView(viewModel: LoginViewModel(), coordinator: LoginCoordinator())
+            LoginScreenView(viewModel: LoginViewModel(), coordinator: appCoordinator.loginCoordinator)
         case .registration:
-            RegistrationView(viewModel: RegistrationViewModel(), coordinator: RegistrationCoordinator())
+            RegistrationScreenView(viewModel: RegistrationViewModel(), coordinator: appCoordinator.registrationCoordinator)
         case .main:
-            MainView(viewModel: MainViewModel(), coordinator: MainCoordinator())
+            MainScreenView(viewModel: MainViewModel(), coordinator: appCoordinator.mainCoordinator)
         case nil:
             Text("Loading...")
         }
     }
 }
+
 
 

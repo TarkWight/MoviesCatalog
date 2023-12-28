@@ -1,5 +1,5 @@
 //
-//  LoginView
+//  LoginScreenView
 //  MoviesCatalog
 //
 //  Created by: Arsentiy
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginScreenView: View {
     @ObservedObject var viewModel: LoginViewModel
-    var coordinator: LoginCoordinator
+    @ObservedObject var coordinator: LoginCoordinator
 
     var body: some View {
         VStack {
@@ -39,6 +39,23 @@ struct LoginView: View {
         }
         .padding()
         .navigationTitle("Login")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: backButton)
+    }
+
+    private var backButton: some View {
+        Button(action: {
+            coordinator.goBackToAuthenticationChoice()
+        }) {
+            Image(systemName: "chevron.left")
+                .font(.title2)
+                .foregroundColor(.blue)
+        }
     }
 }
 
+struct LoginScreenView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginScreenView(viewModel: LoginViewModel(), coordinator: LoginCoordinator())
+    }
+}

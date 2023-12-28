@@ -1,5 +1,5 @@
 //
-//  RegistrationView
+//  RegistrationScreenView
 //  MoviesCatalog
 //
 //  Created by: Arsentiy
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegistrationView: View {
+struct RegistrationScreenView: View {
     @ObservedObject var viewModel: RegistrationViewModel
     var coordinator: RegistrationCoordinator
 
@@ -53,4 +53,6 @@ struct RegistrationView: View {
         .navigationTitle("Registration")
     }
 }
+
+
 

@@ -15,6 +15,25 @@ class AppCoordinator: ObservableObject {
 
     @Published var currentScreen: Screen?
 
+    // Использую ленивые свойства для создания координаторов
+    lazy var loginCoordinator: LoginCoordinator = {
+        let coordinator = LoginCoordinator()
+        coordinator.parentCoordinator = self
+        return coordinator
+    }()
+
+    lazy var registrationCoordinator: RegistrationCoordinator = {
+        let coordinator = RegistrationCoordinator()
+        coordinator.parentCoordinator = self
+        return coordinator
+    }()
+
+    lazy var mainCoordinator: MainCoordinator = {
+        let coordinator = MainCoordinator()
+        coordinator.parentCoordinator = self
+        return coordinator
+    }()
+
     init() {
         checkAuthenticationStatus()
     }
@@ -49,4 +68,6 @@ class AppCoordinator: ObservableObject {
         currentScreen = .main
     }
 }
+
+
 

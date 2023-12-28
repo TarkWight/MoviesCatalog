@@ -9,8 +9,9 @@ import SwiftUI
 
 class RegistrationCoordinator: ObservableObject {
     @Published var currentScreen: Screen?
-
+    weak var parentCoordinator: AppCoordinator?
+    
     func goBackToAuthenticationChoice() {
-        currentScreen = .authenticationChoice
+        parentCoordinator?.currentScreen = .authenticationChoice
     }
 }
