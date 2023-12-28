@@ -5,7 +5,12 @@
 //  Created by: Arsentiy
 //
 
+
 import SwiftUI
+
+extension Notification.Name {
+    static let showRegistration = Notification.Name("ShowRegistration")
+}
 
 class LoginCoordinator: ObservableObject {
     @Published var currentScreen: Screen?
@@ -16,6 +21,14 @@ class LoginCoordinator: ObservableObject {
     }
 
     func goToRegistration() {
-        NotificationCenter.default.post(name: NSNotification.Name("ShowRegistration"), object: nil)
+        do {
+            try navigateToRegistration()
+        } catch {
+            print("Failed to navigate to registration: \(error)")
+        }
+    }
+
+    private func navigateToRegistration() throws {
+        NotificationCenter.default.post(name: .showRegistration, object: nil)
     }
 }
