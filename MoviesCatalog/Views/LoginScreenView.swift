@@ -16,7 +16,7 @@ struct LoginScreenView: View {
     
     var body: some View {
         ZStack {
-            EnumColors.gray
+            ColorsEnum.gray
                 .ignoresSafeArea()
             VStack {
                 createTopBlock()
@@ -39,7 +39,7 @@ struct LoginScreenView: View {
                 .font(.title2)
                 .bold()
                 .padding(.trailing, 15)
-                .foregroundColor(EnumColors.accent)
+                .foregroundColor(ColorsEnum.accent)
             
             Spacer()
         }
@@ -79,7 +79,7 @@ struct LoginScreenView: View {
                     isPasswordVisible.toggle()
                 }) {
                     Image(systemName: isPasswordVisible ? "eye.fill" : "eye.slash.fill")
-                        .foregroundColor(EnumColors.getColor(of: EnumColors.gray, by: 0.45))
+                        .foregroundColor(ColorsEnum.getColor(of: ColorsEnum.gray, by: 0.45))
                 }
                 .padding(.trailing, 8)
             }
@@ -88,7 +88,7 @@ struct LoginScreenView: View {
             Button("Войти") {
                 viewModel.login()
             }
-            .buttonStyle(CustomButtonStyle(color: EnumColors.accent, textColor: .white))
+            .buttonStyle(CustomButtonStyle(color: ColorsEnum.accent, textColor: .white))
             .padding(.vertical, 20)
             .disabled(!areCredentialsValid())
             .opacity(areCredentialsValid() ? 1.0 : 0.5)
@@ -105,7 +105,7 @@ struct LoginScreenView: View {
             Button("Зарегистрируйтесь") {
                 coordinator.goToRegistration()
             }
-            .foregroundColor(EnumColors.accent)
+            .foregroundColor(ColorsEnum.accent)
             .padding()
         }
         .padding()
