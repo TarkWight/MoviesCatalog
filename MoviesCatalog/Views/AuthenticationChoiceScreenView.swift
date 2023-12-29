@@ -13,13 +13,13 @@ struct AuthenticationChoiceScreenView: View {
     
     var body: some View {
         ZStack {
-            EnumColors.gray
+            ColorsEnum.gray
                 .ignoresSafeArea()
             VStack {
                 
                 Text("FИЛЬМУС")
                     .bold()
-                    .foregroundColor(EnumColors.accent)
+                    .foregroundColor(ColorsEnum.accent)
                     .frame(width: 85, height: 21)
                     .padding(.vertical, -100)
                 
@@ -41,13 +41,13 @@ struct AuthenticationChoiceScreenView: View {
                 Button("Регистрация") {
                     coordinator.showRegistration()
                 }
-                .buttonStyle(CustomButtonStyle(color: EnumColors.accent))
+                .buttonStyle(CustomButtonStyle(color: ColorsEnum.accent))
                 .padding(.vertical, 10)
                 
                 Button("Войти") {
                     coordinator.showLogin()
                 }
-                .buttonStyle(CustomButtonStyle(color: EnumColors.getColor(of: .gray, by: 0.1), textColor: EnumColors.accent))
+                .buttonStyle(CustomButtonStyle(color: ColorsEnum.getColor(of: .gray, by: 0.1), textColor: ColorsEnum.accent))
                 .padding(.vertical, 10)
             }
             
