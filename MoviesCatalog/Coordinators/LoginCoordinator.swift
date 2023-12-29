@@ -32,3 +32,4 @@ class LoginCoordinator: ObservableObject {
         NotificationCenter.default.post(name: .showRegistration, object: nil)
     }
 }
+

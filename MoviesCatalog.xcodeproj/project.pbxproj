@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4D1C16F72B3A87670018A280 /* RegistrationPasswordScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C16F62B3A87670018A280 /* RegistrationPasswordScreenView.swift */; };
 		4D1C16FA2B3AA1000018A280 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C16F92B3AA1000018A280 /* Coordinator.swift */; };
+		4D4CC9392B3E0AC8003399B3 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CC9382B3E0AC8003399B3 /* DatePickerView.swift */; };
+		4D4CC93C2B3E2317003399B3 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CC93B2B3E2316003399B3 /* HomeScreenView.swift */; };
+		4D4CC93E2B3E2329003399B3 /* FavoriteScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CC93D2B3E2329003399B3 /* FavoriteScreenView.swift */; };
+		4D4CC9402B3E233B003399B3 /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CC93F2B3E233B003399B3 /* ProfileScreenView.swift */; };
+		4D4CC9432B3E527A003399B3 /* GenderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CC9422B3E527A003399B3 /* GenderEnum.swift */; };
 		4D89938A2B383667007125A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8993892B383667007125A0 /* Assets.xcassets */; };
 		4D89938C2B38367E007125A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89938B2B38367E007125A0 /* ContentView.swift */; };
 		4D89938E2B3836AC007125A0 /* MoviesCatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89938D2B3836AC007125A0 /* MoviesCatalogApp.swift */; };
@@ -25,7 +30,7 @@
 		4D8993AC2B387054007125A0 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993AB2B387054007125A0 /* MainScreenView.swift */; };
 		4D8993AE2B38706D007125A0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993AD2B38706D007125A0 /* MainViewModel.swift */; };
 		4D8993B02B38813B007125A0 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993AF2B38813B007125A0 /* CustomButtonStyle.swift */; };
-		4D8993B22B388171007125A0 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993B12B388171007125A0 /* CustomColors.swift */; };
+		4D8993B22B388171007125A0 /* ColorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8993B12B388171007125A0 /* ColorsEnum.swift */; };
 		5C97E6132B2B9740006A609F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C97E6122B2B9740006A609F /* README.md */; };
 		5C97E6152B2B974D006A609F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5C97E6142B2B974D006A609F /* .gitignore */; };
 /* End PBXBuildFile section */
@@ -33,6 +38,11 @@
 /* Begin PBXFileReference section */
 		4D1C16F62B3A87670018A280 /* RegistrationPasswordScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPasswordScreenView.swift; sourceTree = "<group>"; };
 		4D1C16F92B3AA1000018A280 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4D4CC9382B3E0AC8003399B3 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		4D4CC93B2B3E2316003399B3 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		4D4CC93D2B3E2329003399B3 /* FavoriteScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreenView.swift; sourceTree = "<group>"; };
+		4D4CC93F2B3E233B003399B3 /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
+		4D4CC9422B3E527A003399B3 /* GenderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderEnum.swift; sourceTree = "<group>"; };
 		4D8993892B383667007125A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D89938B2B38367E007125A0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D89938D2B3836AC007125A0 /* MoviesCatalogApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCatalogApp.swift; sourceTree = "<group>"; };
@@ -49,7 +59,7 @@
 		4D8993AB2B387054007125A0 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		4D8993AD2B38706D007125A0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4D8993AF2B38813B007125A0 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
-		4D8993B12B388171007125A0 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		4D8993B12B388171007125A0 /* ColorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsEnum.swift; sourceTree = "<group>"; };
 		4D8993B52B38A0EB007125A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C97E6012B2B972B006A609F /* MoviesCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C97E6122B2B9740006A609F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -70,6 +80,7 @@
 		4D1C16F82B3A87730018A280 /* RegistrationView */ = {
 			isa = PBXGroup;
 			children = (
+				4D4CC9382B3E0AC8003399B3 /* DatePickerView.swift */,
 				4D8993A72B386FEE007125A0 /* RegistrationScreenView.swift */,
 				4D1C16F62B3A87670018A280 /* RegistrationPasswordScreenView.swift */,
 			);
@@ -84,6 +95,25 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		4D4CC93A2B3E22E9003399B3 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				4D8993AB2B387054007125A0 /* MainScreenView.swift */,
+				4D4CC9412B3E2342003399B3 /* TabView */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		4D4CC9412B3E2342003399B3 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				4D4CC93B2B3E2316003399B3 /* HomeScreenView.swift */,
+				4D4CC93D2B3E2329003399B3 /* FavoriteScreenView.swift */,
+				4D4CC93F2B3E233B003399B3 /* ProfileScreenView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
 		4D89938F2B3845EF007125A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +121,7 @@
 				4D89939F2B386DB8007125A0 /* AuthenticationChoiceScreenView.swift */,
 				4D8993972B3858D0007125A0 /* LoginScreenView.swift */,
 				4D1C16F82B3A87730018A280 /* RegistrationView */,
-				4D8993AB2B387054007125A0 /* MainScreenView.swift */,
+				4D4CC93A2B3E22E9003399B3 /* MainView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,8 +148,9 @@
 			children = (
 				4D89938D2B3836AC007125A0 /* MoviesCatalogApp.swift */,
 				4D8993AF2B38813B007125A0 /* CustomButtonStyle.swift */,
-				4D8993B12B388171007125A0 /* CustomColors.swift */,
+				4D8993B12B388171007125A0 /* ColorsEnum.swift */,
 				4D89939B2B3859C0007125A0 /* Screen.swift */,
+				4D4CC9422B3E527A003399B3 /* GenderEnum.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -240,18 +271,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4CC9402B3E233B003399B3 /* ProfileScreenView.swift in Sources */,
 				4D8993A82B386FEE007125A0 /* RegistrationScreenView.swift in Sources */,
+				4D4CC93E2B3E2329003399B3 /* FavoriteScreenView.swift in Sources */,
+				4D4CC9432B3E527A003399B3 /* GenderEnum.swift in Sources */,
 				4D8993AC2B387054007125A0 /* MainScreenView.swift in Sources */,
 				4D8993AA2B38703D007125A0 /* MainCoordinator.swift in Sources */,
 				4D89939C2B3859C0007125A0 /* Screen.swift in Sources */,
 				4D8993A42B386F25007125A0 /* RegistrationViewModel.swift in Sources */,
 				4D1C16FA2B3AA1000018A280 /* Coordinator.swift in Sources */,
 				4D8993982B3858D0007125A0 /* LoginScreenView.swift in Sources */,
+				4D4CC93C2B3E2317003399B3 /* HomeScreenView.swift in Sources */,
 				4D8993A62B386FBF007125A0 /* RegistrationCoordinator.swift in Sources */,
+				4D4CC9392B3E0AC8003399B3 /* DatePickerView.swift in Sources */,
 				4D8993AE2B38706D007125A0 /* MainViewModel.swift in Sources */,
 				4D8993A02B386DB8007125A0 /* AuthenticationChoiceScreenView.swift in Sources */,
 				4D89939E2B38678E007125A0 /* LoginViewModel.swift in Sources */,
-				4D8993B22B388171007125A0 /* CustomColors.swift in Sources */,
+				4D8993B22B388171007125A0 /* ColorsEnum.swift in Sources */,
 				4D8993A22B386E07007125A0 /* AppCoordinator.swift in Sources */,
 				4D89938E2B3836AC007125A0 /* MoviesCatalogApp.swift in Sources */,
 				4D8993B02B38813B007125A0 /* CustomButtonStyle.swift in Sources */,
