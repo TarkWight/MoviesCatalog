@@ -1,5 +1,5 @@
 //
-//  CustomColors
+//  ColorsEnum
 //  MoviesCatalog
 //
 //  Created by: Arsentiy
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum EnumColors {
+enum ColorsEnum {
     
     static let accent2 = Color("Accent_y")
     static let accent = Color("Accent_r")
