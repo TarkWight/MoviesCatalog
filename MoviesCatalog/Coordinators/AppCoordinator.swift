@@ -28,8 +28,8 @@ class AppCoordinator: ObservableObject {
         return coordinator
     }()
 
-    lazy var mainCoordinator: MainCoordinator = {
-        let coordinator = MainCoordinator()
+    lazy var mainCoordinator: MainScreenCoordinator = {
+        let coordinator = MainScreenCoordinator()
         coordinator.parentCoordinator = self
         return coordinator
     }()

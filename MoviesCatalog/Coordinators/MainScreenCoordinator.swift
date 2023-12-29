@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class MainCoordinator: ObservableObject {
+class MainScreenCoordinator: ObservableObject {
     @Published var currentScreen: Screen?
     weak var parentCoordinator: AppCoordinator?
     
